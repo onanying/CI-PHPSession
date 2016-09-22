@@ -69,5 +69,5 @@ $this->nsession->unset_userdata($array_items);
 ```php
 session_destroy();
 // or
-$this->session->sess_destroy();
+$this->nsession->sess_destroy();
 ```
