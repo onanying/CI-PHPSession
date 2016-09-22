@@ -19,16 +19,16 @@ class Nsession
         return isset($_SESSION[$name]) ? $_SESSION[$name] : null;
     }
 
+    // 获取 Session 数据 (为了和之前的版本兼容)
+    public function userdata($name = null)
+    {
+        return is_null($name) ? $_SESSION : $_SESSION[$name];
+    }
+
     // 添加 Session 数据
     public function __set($name, $value)
     {
         $_SESSION[$name] = $value;
-    }
-
-    // 获取 Session 数据 (为了和之前的版本兼容)
-    public function userdata($name)
-    {
-        return $_SESSION[$name];
     }
 
     // 添加 Session 数据 (为了和之前的版本兼容)
@@ -44,6 +44,12 @@ class Nsession
                 $this->__set($args1, $args2);
                 break;
         }
+    }
+
+    // 检查某个 session 值是否存在
+    public function has_userdata($name)
+    {
+        return isset($_SESSION[$name]);
     }
 
     // 删除 Session 数据
