@@ -4,9 +4,11 @@ CodeIgniter 的 session 类因为无法做到关闭浏览器session就失效，�
 
 ### 使用 Session 类
 
-和CodeIgniter的session类的方法一模一样，只是载入的类由session变为nsession，[官方文档](http://codeigniter.org.cn/user_guide/libraries/sessions.html)。
+与CodeIgniter的session类的使用方法一模一样，只是载入的类由session变为nsession，[官方文档](http://codeigniter.org.cn/user_guide/libraries/sessions.html)。
 
-#### 初始化 Session 类
+#### 初始化 Nsession 类
+
+先将 Nsession.php 放入 application\libraries 目录。
 
 ```
 $this->load->library('nsession');
