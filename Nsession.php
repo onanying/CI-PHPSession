@@ -3,7 +3,7 @@
 /**
  * codeigniter使用php原生session
  * @author 刘健 <59208859@qq.com>
- * 完全兼容codeigniter 3，本session类除了Flashdata/Tempdata外的其他都有按codeigniter的方法重写为原生
+ * 完全兼容codeigniter 2 & 3，本session类除了Flashdata/Tempdata外，其他类方法都有按codeigniter的调用方法重写为原生php session存储数据
  */
 class Nsession
 {
