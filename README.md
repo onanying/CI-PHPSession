@@ -17,13 +17,16 @@ $this->load->library('nsession');
 ```php
 // 获取单个键值
 $_SESSION['item']
+// or
 $this->nsession->item
+// or
 $this->nsession->userdata('item');
 ```
 
 ```php
 // 获取所有键值
 $_SESSION
+// or
 $this->nsession->userdata();
 ```
 
@@ -45,6 +48,7 @@ $this->nsession->set_userdata('some_name', 'some_value');
 
 ```php
 isset($_SESSION['some_name'])
+// or
 $this->nsession->has_userdata('some_name');
 ```
 
@@ -53,9 +57,17 @@ $this->nsession->has_userdata('some_name');
 
 ```php
 unset($_SESSION['some_name']);
-
+// or
 $this->nsession->unset_userdata('some_name');
-
+// or
 $array_items = array('username', 'email');
 $this->nsession->unset_userdata($array_items);
+```
+
+#### 销毁 Session
+
+```php
+session_destroy();
+// or
+$this->session->sess_destroy();
 ```
